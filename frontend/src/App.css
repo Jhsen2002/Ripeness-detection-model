@@ -1,0 +1,644 @@
+
+@media (min-width: 1000px) {
+
+  body, html {
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  body {
+    background-color: rgb(251, 205, 119);
+  }
+
+  .Scanner {
+    background-color: #454545; 
+  }
+  
+  .App {
+    text-align: center;
+    overflow: auto;
+    height: 100vh;
+  }
+
+
+  
+  .username,
+  .password {
+    width: 300px;
+    height: 20px;
+    font-size: 15px;
+    font-weight: normal;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: white;
+    margin: 10px 10px 10px 10px; 
+    text-align: center;
+  }
+
+  .login-outer {
+    justify-content: center;
+    display: flex;
+  }
+  
+  .login-button {
+    width: 200px;
+    height: max-content;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: orangered;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: orangered;
+    margin: 20px;
+    cursor: pointer;
+  }
+  
+  /* Input icons */
+  .input-icons {
+    position: relative;
+    width: 100%;
+    margin: 10px 0; 
+  }
+  
+  .input-icons .icon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 50%;
+    left: 0;
+    padding: 0 2em 0 1em; 
+    transform: translateY(-50%);
+    margin-left: 30px;
+  }
+  
+  input[type='text']::placeholder {
+    text-align: center;
+  }
+  
+  input[type='password']::placeholder {
+    text-align: center;
+  }
+  
+  .logo {
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+  }
+  
+  /* Checkbox container */
+  .checkbox-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px;
+    padding-left: 20px; 
+  }
+
+  .tc1-label{
+    text-align: left;
+  }
+  
+  .tc2-label {
+    text-align: left;
+  }
+  
+  .camera-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    width: 50%;
+    justify-content: center;
+  }
+  
+  .video-feed {
+    max-width: 100%;
+    border: 2px solid #333;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .start-button,
+  .capture-button
+  {
+    background-color: #FF6000; /* #4caf50; */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 10px 0px 20px;
+  }
+  
+  .retake-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 20px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+
+
+  .captured-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 100vh; 
+    overflow-y: auto; 
+  }
+
+  
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .map-parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  } 
+  
+  .map-button,
+  .result-button,
+  .settings-button {
+    flex: 1; /* Distribute available space equally */
+    background-color:#454545; /* #3498db; */
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0px 10px;
+    font-size: large;
+  }
+
+  .result-container,
+  .setting-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .map-button{
+    margin: 0px 10px 0px 20px;
+  }
+  
+  .class-input,
+  .confidence-input{
+    width: 200px;
+    height: 10px;
+    font-size: 15px;
+    font-weight: normal;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: white;
+    margin: 10px 10px 10px 10px; /*top, right, bottom, left*/
+    text-align: center;
+  }
+  
+  .prediction-cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    height: max-content;
+    padding: 10px;
+    font-size: large;
+  }
+
+  .predictions-text{
+    color: rgb(0, 0, 0);
+    text-align: left;
+    margin: 17px;
+  }
+
+  .display-predictions{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .edit-button,
+  .predictions-button{
+    width: 100px;
+    height: max-content;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: orangered;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: orangered;
+    cursor: pointer;
+    margin-right: 160px;
+  }
+
+  .back-button {
+    position: absolute; 
+    top: 10px; 
+    left: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(251, 205, 119);
+  }
+
+  .model-card {
+    background-color: #454545;
+    width: 30vw; 
+    height: auto;
+    padding: 20px;
+    color: white; 
+    border: none;
+  }
+
+  .model-card-header {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  .model-card-content {
+    font-size: 20px;
+  }
+  
+  .model-button {
+    background-color: #454545;
+    flex: 1; /* Distribute available space equally */
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px 10px;
+    font-size: large;
+  }
+
+  .model-label {
+    margin-bottom: 10px; /* Adjust the margin as needed */
+  }  
+  
+  .model-button:hover {
+    background-color: #FFA559;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .model-button:active {
+    background-color: #FFA559;
+    color: black;
+    font-weight: bold;
+  }
+
+  .sign-out-button {
+    width: 32vw;
+    height: auto;
+    font-size: 15px;
+    font-size: large;
+    font-weight: bold;
+    background-color: grey;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    margin-top: 40px;
+    border-color: transparent;
+  }
+
+  .sign-out-button:hover {
+    background-color: #FFA559;
+    color: black;
+    font-weight: bold;
+  }
+
+  }
+  
+  /*
+  ////////////////////////////////////////////////////
+  */
+  
+  /* Mobile view */
+  @media (max-width: 1000px) {
+    body {
+      background-color: rgb(251, 205, 119);
+      margin: 0; 
+      padding: 0; 
+    }
+    
+    .App {
+      text-align: center;
+      margin-top: 80px; 
+      overflow: hidden;
+    }
+    
+    
+    /* Input fields */
+    .username,
+    .password {
+      width: 90%; 
+      max-width: 300px; 
+      font-size: 14px; 
+      font-weight: normal;
+      color: rgb(0, 0, 0);
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+      border-color: white;
+      margin: 10px auto; 
+      text-align: center;
+    }
+    
+    .login-outer {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+
+    /* Login button */
+    .login-button {
+      width: 90%; 
+      max-width: 200px; 
+      font-size: 14px; 
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      background-color: orangered;
+      padding: 10px;
+      border-radius: 10px;
+      border-color: #f44336;
+      margin: 20px auto; 
+      cursor: pointer;
+    }
+    
+    /* Input icons */
+    .input-icons {
+      position: relative;
+      width: 100%;
+      margin: 10px 0; 
+    }
+    
+    .input-icons .icon {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      top: 50%;
+      left: 0;
+      padding: 2px 0 0 10px; 
+      transform: translateY(-50%);
+      margin-left: 30px;
+    }
+    
+    input[type='text']::placeholder {
+      text-align: center;
+    }
+    
+    input[type='password']::placeholder {
+      text-align: center;
+    }
+    
+    /* Logo */
+    .logo {
+      width: 150px; 
+      height: 150px; 
+    }
+    
+    /* Checkbox container */
+    .checkbox-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 10px;
+      padding-left: 20px; 
+    }
+
+    .tc1-label{
+      text-align: left;
+    }
+
+    .tc2-label {
+      text-align: left;
+    }
+      
+    /* Camera container */
+    .camera-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+      width: 100%; 
+    }
+    
+    /* Video feed */
+    .video-feed {
+      max-width: 100%;
+      width: 90%; 
+      border: 2px solid #333;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    
+    .start-button,
+    .capture-button,
+    .retake-button {
+      background-color: #FF6000; /* #4caf50; */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .retake-button {
+      background-color: #f44336;
+      padding: 20px 20px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    
+    .captured-image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 80%;
+      width: 80%;
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+  
+    .map-button,
+    .result-button,
+    .settings-button {
+      flex: 1; /* Distribute available space equally */
+      background-color:#454545; /* #3498db; */
+      color: white;
+      border: none;
+      padding: 10px 30px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px 10px;
+      font-size: large;
+    }
+
+    .result-container,
+    .setting-container{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .class-input,
+    .confidence-input{
+      width: 200px;
+      height: 10px;
+      font-size: 15px;
+      font-weight: normal;
+      color: rgb(0, 0, 0);
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+      border-color: white;
+      margin: 10px 10px 10px 10px; /*top, right, bottom, left*/
+      text-align: center;
+    }
+    
+    .prediction-cards{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 330px;
+      height: max-content;
+      padding: 10px;
+      padding: 10px;
+    }
+
+    .predictions-text{
+      color: rgb(0, 0, 0);
+      text-align: left;
+      margin: 17px;
+    }
+
+    .display-predictions{
+      justify-content: center;
+      align-items: center;
+    }
+
+    .edit-button
+    {
+      width: 40%;
+      height: max-content;
+      font-size: 15px;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      background-color: orangered;
+      padding: 10px;
+      border-radius: 10px;
+      border-color: orangered;
+      cursor: pointer;
+    }
+
+    .predictions-button {
+      width: 40%;
+      height: max-content;
+      font-size: 15px;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      background-color: orangered;
+      padding: 10px;
+      border-radius: 10px;
+      border-color: orangered;
+      cursor: pointer;
+      margin-right: 130px;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 20px; 
+      left: 10px; 
+      border: none;
+      cursor: pointer;
+      background-color: rgb(251, 205, 119);
+    }
+
+    .model-card {
+      background-color: #454545;
+      width: 50vw; 
+      height: auto;
+      padding: 20px;
+      color: white; 
+      border: none;
+    }
+  
+    .model-card-header {
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+  
+    .model-card-content {
+      font-size: 20px;
+    }
+    
+    .model-button {
+      background-color: #454545;
+      flex: 1; /* Distribute available space equally */
+      color: white;
+      border: none;
+      padding: 10px 30px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 15px 10px;
+      font-size: large;
+    }
+  
+    .model-label {
+      margin-bottom: 10px; /* Adjust the margin as needed */
+    }  
+    
+    .model-button:hover {
+      background-color: #FFA559;
+      color: black;
+      font-weight: bold;
+    }
+    
+    .model-button:active {
+      background-color: #FFA559;
+      color: black;
+      font-weight: bold;
+    }
+
+    .sign-out-button {
+      width: 55vw;
+      height: auto;
+      font-size: 15px;
+      font-size: large;
+      font-weight: bold;
+      background-color: grey;
+      border-radius: 5px;
+      padding: 15px;
+      cursor: pointer;
+      margin-top: 40px;
+      border-color: transparent;
+    }
+
+    .sign-out-button:hover {
+      background-color: #FFA559;
+      color: black;
+      font-weight: bold;
+    }
+  
+  }
+  
+    
